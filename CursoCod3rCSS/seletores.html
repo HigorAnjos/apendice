@@ -6,7 +6,25 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        /*p + ul{} seleciona <ul> que e diretamente depois de <p> */
+        /* p ~ ol{} seleciona <ol> sendo irmaos e q tenha alguma teg <p> anterior */
+        /*[feira]{} Seleciona todos que tenha uma propriedade feira='' */
+        /*[feira=casa]{} Seleciona apenas que tenha uma propriedade feira='casa' */
+        /*[feira~=escritorio]{} Seleciona apenas que tenha uma propriedade feira='escritorio' e algum espaco*/
+        /*[feira*=sa]{} Seleciona apenas que tenha uma propriedade feira='sa' Seria como: *sa* */
+        
+        /* span:nth-child(1){} Seleciona o primeiro filho de alguem */
+        /* section > :nth-child(odd){} Seleciona dentro de um section todos os filhos impares*/
+        /* section > :nth-child(even){} Seleciona dentro de um section todos os filhos pares*/
+        /*section > span:nth-of-type(2){} Seleciona o segundo elemento do tipo span dentro de section*/
+        
+        section > span:nth-of-type(2)
+        {
+            color: #ff0;
+            background-color: #f77;
+        }
+        
+
     </style>
 </head>
 
@@ -29,7 +47,7 @@
             </ol>
             <div id='aninhado' class='tag'>
                 <div class="tag">
-                    <section class='tag'>
+                    <section class='tag nolabel'>
                         <span class='tag'>1</span>
                         <p class='tag'>2</p>
                         <span class='tag'>3</span>
