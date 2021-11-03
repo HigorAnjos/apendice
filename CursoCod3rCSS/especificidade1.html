@@ -6,6 +6,33 @@
     <title>Especificidade CSS</title>
     <style>
         /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+        /*
+            Em linhas gerais...
+
+            1. regra com !important //Nao recomendado
+            2. seletores mais especificos
+            3. última regra processada (empate) // Prioridade quem foi o ultimo
+        */
+        /* Classe tem mais especifissidade que a tag, sendo a sobreposta apesar de ter sido execultado por ultimo*/
+        .observacao
+        {
+            background-color: #5F5;
+            border: dashed 5px;
+            padding: 200px;
+            font-size: 40px;
+        }
+        p 
+        {
+            background-color: #aaa;
+        }
+        /* Mais especificos que os dois*/
+        /*(mais espeficificos)p.observacao > .observacao > p (menos espeficificos)  */
+        p.observacao
+        {
+            padding: 2px;
+            background: linear-gradient(to right, red, yellow);
+        }
+        
     </style>
 </head>
 
